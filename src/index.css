@@ -1,3 +1,68 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* MyComponent.css */
+.custom-scrollbar {
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: transparent transparent; /* For Firefox */
+    overflow: auto;
+  }
+  
+  /* For WebKit (Chrome, Safari) */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+
+  /* MyComponent.css */
+
+.overflow-x-auto {
+    overflow-x: auto;
+  }
+  
+  .my-custom-scrollbar {
+    /* Styles for your base class */
+    padding: 10px;
+    max-width: 300px; /* Adjust as needed */
+    overflow-y: hidden; /* Hide vertical scrollbar by default */
+    position: relative; /* Set position to relative */
+  }
+  
+  .my-custom-scrollbar:hover {
+    overflow-y: auto; /* Enable vertical scrollbar when hovered */
+  }
+  
+  .my-custom-scrollbar::-webkit-scrollbar {
+    width: 6px; /* For WebKit (Chrome, Safari, Edge) */
+  }
+  
+  .my-custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #606060; /* Set the color */
+    border-radius: 3px; /* Set the border-radius for rounded corners */
+  }
+  
+  .my-custom-scrollbar::-webkit-scrollbar-track {
+    background-color: transparent; /* Set the background color of the track */
+  }
+  
+  /* Additional styles for your component content */
+  p {
+    margin-bottom: 10px;
+  }
+  
+  /* Additional styles for the scrollbar container */
+  .my-custom-scrollbar::before {
+    content: ''; 
+    position: absolute; 
+    top: 0; 
+    bottom: 0; 
+    right: 0; 
+    width: 6px; /* Adjust as needed */
+    background-color: transparent;
+    z-index: 1; /* Ensure the scrollbar is on top of the content */
+  }
+  
